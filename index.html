@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Climate Crossword</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --black: #000000;
+    --grey-line: #666666;
+    --grey-text: #444444;
+    --red: #c81e1e;
+    --blue: #1a4fa0;
+    --blue-fill: #a9c8ec;
+    --green: #1a7a3c;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body {
+    background: #d8d8d8;
+    color: var(--black);
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px 60px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .page {
+    width: 918px;
+    background: var(--white);
+    border: 3px solid var(--black);
+    padding: 28px 34px 40px;
+    margin: 0 auto;
+  }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    text-align: center;
+    padding-bottom: 14px;
+  }
+  .masthead-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+  .mark {
+    width: 30px; height: 30px;
+    border: 2px solid var(--black);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .mark-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%; height: 100%;
+  }
+  .mark-grid div { border: 0.5px solid var(--black); }
+  .mark-grid div:nth-child(2), .mark-grid div:nth-child(4),
+  .mark-grid div:nth-child(6), .mark-grid div:nth-child(8) { background: var(--black); }
+
+  .masthead h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 56px;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .rule-thick { height: 4px; background: var(--black); margin-top: 14px; }
+  .rule-thin { height: 1px; background: var(--black); margin-top: 3px; margin-bottom: 30px; }
+
+  /* ============ DESCRIPTION ============ */
+  .description {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.65;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #222;
+  }
+
+  /* ============ ARCHIVE ============ */
+  .section-tag {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  .archive-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .issue-button {
+    display: block;
+    border: 2px solid var(--black);
+    background: var(--white);
+    color: var(--black);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px 28px;
+    min-width: 140px;
+    text-align: center;
+    transition: background 0.12s, color 0.12s;
+  }
+  .issue-button:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="masthead-row">
+      <div class="mark"><div class="mark-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+      <h1>The Climate Crossword</h1>
+      <div class="mark"><div class="mark-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+    </div>
+    <div class="rule-thick"></div>
+    <div class="rule-thin"></div>
+  </div>
+
+  <p class="description">
+    This is a place to explore climate thematically, through a puzzle structure that's been
+    around for over a century. Crosswords are built on deductive reasoning, lateral thinking,
+    and error recognition. The Climate Crossword applies that structure to climate as subject
+    matter, with an additional anagram layer, so each puzzle works on two levels instead of
+    one. A set of marked cells across the grid collect letters as they're solved, and those
+    letters rearrange into a second, hidden answer once enough of the puzzle is filled in.
+    Each puzzle is published as a numbered issue and stays archived permanently, so past
+    issues remain solvable rather than being replaced by newer ones.
+  </p>
+
+  <div class="section-tag">The Archive</div>
+  <div class="archive-grid">
+    <a class="issue-button" href="issue-001.html">Issue #001</a>
+    <a class="issue-button" href="issue-002.html">Issue #002</a>
+    <a class="issue-button" href="issue-003.html">Issue #003</a>
+  </div>
+
+</div>
+</body>
+</html>
