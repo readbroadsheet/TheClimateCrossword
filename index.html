@@ -121,6 +121,21 @@
     background: var(--black);
     color: var(--white);
   }
+  .issue-button.sdg {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+  }
+  .issue-button.sdg .sdg-badge {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    margin-right: 2px;
+  }
+  .issue-button.sdg:hover .sdg-badge {
+    filter: invert(1);
+  }
 </style>
 </head>
 <body>
@@ -153,6 +168,7 @@
     <a class="issue-button" href="issue-002.html">Issue #002</a>
     <a class="issue-button" href="issue-003.html">Issue #003</a>
     <a class="issue-button" href="issue-004.html">Issue #004</a>
+    <a class="issue-button sdg" href="issue-005.html"><img class="sdg-badge" src="sdg-13.png" alt="SDG 13">Issue #005</a>
   </div>
 
 </div>
